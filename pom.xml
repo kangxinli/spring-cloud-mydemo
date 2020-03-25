@@ -15,6 +15,8 @@
 	<modules>
 		<module>spring-cloud-mydemo-gateway</module>
 		<module>spring-cloud-mydemo-service</module>
+		<module>spring-cloud-mydemo-common</module>
+		<module>spring-cloud-mydemo-auth</module>
 	</modules>
 
 	<properties>
@@ -25,6 +27,8 @@
 		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>
 		<alibaba-cloud.version>2.2.0.RELEASE</alibaba-cloud.version>
 		<spring-boot-admin.version>2.1.6</spring-boot-admin.version>
+		<nacos.version>0.9.0.RELEASE</nacos.version>
+		<alibaba.sentinel.version>2.1.1.RELEASE</alibaba.sentinel.version>
 		<druid.version>1.1.14</druid.version>
 		<bitwalker.version>1.19</bitwalker.version>
 		<kaptcha.version>2.3.2</kaptcha.version>
@@ -61,12 +65,10 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>com.alibaba.cloud</groupId>
-				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
-				<version>${alibaba-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-cloud.version}</version>
+            </dependency>
 
 			<dependency>
 				<groupId>de.codecentric</groupId>
@@ -77,10 +79,21 @@
 			</dependency>
 			
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-				<version>0.2.1.RELEASE</version>
-			</dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${alibaba.sentinel.version}</version>
+            </dependency>
 
 
 			<!-- SpringBoot的依赖配置 -->
@@ -221,6 +234,12 @@
 				<artifactId>springfox-swagger2</artifactId>
 				<version>${swagger.version}</version>
 			</dependency>
+			
+			<dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
 
 			<dependency>
 				<groupId>io.springfox</groupId>

@@ -27,10 +27,10 @@ public class TestController {
 	@SentinelResource(value = "findById", blockHandler = "exceptionHandler")
 	public User findById(@PathVariable Long id) {
 		// 这里用到了RestTemplate的占位符能力
-		User user = this.restTemplate.getForObject("http://demo-service-provider/users/{id}", User.class, id);
+		User user = this.restTemplate.getForObject("http://demo-service-provider/provider/users/{id}", User.class, id);
 		return user;
 	}
-
+	
 	public User exceptionHandler(Long id, BlockException ex) {
 		log.error("限流处理", ex);
 		return new User(-1L, "默认用户", "默认用户", 1, new BigDecimal("1"));
