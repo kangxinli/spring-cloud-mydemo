@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sample.demo.service.provider.entity.User;
 import com.sample.demo.service.provider.repository.UserRepository;
 
-@RequestMapping("/users")
+@RequestMapping("/provider")
 @RestController
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 
-	@GetMapping("/{id}")
+	@GetMapping("/users/{id}")
 	public Optional<User> findById(@PathVariable Long id) {
 		return this.userRepository.findById(id);
 	}

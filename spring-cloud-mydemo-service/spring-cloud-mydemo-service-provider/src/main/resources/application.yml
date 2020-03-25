@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 9002
 spring:
   application:
     # 注册到Nacos上的服务名称

@@ -15,7 +15,7 @@ import com.sample.demo.service.consumer.entity.User;
 
 import lombok.extern.slf4j.Slf4j;
 
-@RequestMapping("/test")
+@RequestMapping("/consumer/test")
 @RestController
 @Slf4j
 public class TestController {
