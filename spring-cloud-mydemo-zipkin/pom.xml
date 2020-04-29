@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>spring-cloud-mydemo</artifactId>
+		<groupId>com.sample</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>spring-cloud-mydemo-zipkin</artifactId>
+	<packaging>pom</packaging>
+
+
+	<modules>
+		<module>spring-cloud-mydemo-zipkin-service1</module>
+		<module>spring-cloud-mydemo-zipkin-service2</module>
+		<module>spring-cloud-mydemo-zipkin-service3</module>
+	</modules>
+</project>
