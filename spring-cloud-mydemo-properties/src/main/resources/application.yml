@@ -1,0 +1,15 @@
+
+biz:
+  refresh: ${random.long}
+  key: refresh-test
+
+rest:
+  uuid: ${random.uuid}
+
+server:
+  port: 8081
+  
+  
+schedule:
+  task:
+    cron: 0/5 * * * * ?
