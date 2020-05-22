@@ -1,0 +1,10 @@
+server:
+  port: 9093
+
+spring:
+  application:
+    name: account-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: dev.ovi-ai.com:8848

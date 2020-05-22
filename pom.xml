@@ -17,6 +17,7 @@
 		<module>spring-cloud-mydemo-service</module>
 		<module>spring-cloud-mydemo-zipkin</module>
 		<module>spring-cloud-mydemo-properties</module>
+		<module>spring-cloud-mydemo-seata</module>
 	</modules>
 
 	<properties>
