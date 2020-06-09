@@ -1,9 +1,7 @@
 package com.sample.demo.properties.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.context.environment.EnvironmentChangeEvent;
 import org.springframework.cloud.context.refresh.ContextRefresher;
-import org.springframework.context.event.EventListener;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
